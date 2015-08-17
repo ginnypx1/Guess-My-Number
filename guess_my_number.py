@@ -1,13 +1,15 @@
 import random
 
+
 my_number = random.randint(1, 10)
+
 
 def gameloop():
 	print('I am thinking of a number 1 to 10...')
-	print('Can you guess it in three tries or less?')
-	total = 0
+    print('Can you guess it in three tries or less?')
+    total = 0
 	guess = input('Guess my number => ')
-	
+
 	while total <= 2:
 		if '.' in guess:
 			guess = input('No decimals. Guess my number => ')
