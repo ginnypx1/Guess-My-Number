@@ -1,0 +1,142 @@
+/********************************
+STANDARD PAGE RULES
+*********************************/
+* {
+	margin:0;
+	padding:0;
+} 
+html,
+body {
+	height: 100%;
+	text-align: center;
+}
+/*******************************
+BOX SIZING
+*******************************/
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;   
+    box-sizing: border-box;   /* Everything else */
+}
+/*******************************
+FONTS
+*******************************/
+html {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+}
+#play-again {
+	font-size: 1.15em;
+}
+p,
+a,
+button {
+	font-size: 1.25em;
+}
+h1 {
+	font-size: 3em;
+}
+/********************************
+ COLORS
+*********************************/
+html,
+#num {
+	background-color: #E6EADE; /* grey */
+}
+body {
+	background-color: #00878A; /* blue */
+}
+p,
+#play-again {
+	color: #E6EADE; /* grey */
+}
+#game-dirs p,
+button {
+	color: #367A06; /* dark green */;
+}
+h1,
+a,
+button,
+#start-button,
+#game-dirs {
+	color: #367A06; /* dark green */
+	background-color: #7DB8B3; /* light blue */
+}
+#num {
+	color: #003B38; /* dark blue */
+}
+/********************************
+ LINK PROPERTIES
+*********************************/
+a:link, 
+a:visited {
+	text-decoration:none;
+	border: none;
+	}
+ 
+a:hover, 
+a:active {
+	color: #003B38; /* dark blue */
+	}
+/*******************************
+PADDING
+*******************************/
+h1, 
+#game-dirs,
+form {
+	padding: 20px;
+}
+p,
+#num,
+button,
+#play-again {
+	padding: 5px;
+}
+#hint {
+	padding: 20px 5px 5px 5px;
+}
+#start-button {
+	padding:10px;
+	margin: 10px;
+}
+#directions {
+	padding: 40px;
+}
+h1,
+#game-dirs {
+	margin-top: 15px;
+}
+#play-again {
+	margin-left: 10px;
+}
+/*******************************
+SIZING
+*******************************/
+body {
+	width: 500px;
+	height: 350px;
+	margin: 0 auto;
+}
+#start-button {
+	width: 200px;
+	margin: 0 auto;
+}
+/*******************************
+BORDERS
+*******************************/
+#start-button,
+button {
+	border: 2px solid #E6EADE; /* grey */
+	border-radius: 45px;
+}
+#play-again {
+	border: 2px solid #367A06; /* dark green */
+}
+body {
+	border-radius: 45px;
+}
+h1,
+#game-dirs {
+	border-bottom: 2px solid #E6EADE; /* grey */
+	border-radius: 45px 45px 0 0;
+}

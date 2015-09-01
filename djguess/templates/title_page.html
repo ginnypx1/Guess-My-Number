@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Guess My Number{% endblock %}
+
+{% block content %}
+<h1>Guess My Number!</h1>
+
+<div id="directions">
+	<p>I am thinking of a number 1-10...</p>
+	<p>Can you guess what it is?</p>
+</div>
+
+<div id="start-button">
+	<a href="{% url 'guessinggame:game' %}">Let's Play!</a>
+</div>
+{% endblock %}

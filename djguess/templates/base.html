@@ -1,0 +1,21 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html>
+
+<head>
+	<title>{% block title %}{% endblock %}</title>
+
+	<link rel="stylesheet" href="{% static 'css/guess_style.css' %}" >
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+	{% block content %}
+	{% endblock %}
+	<script src="{% static 'guess.js' %}" type="text/javascript"></script>
+</body>
+
+</html>

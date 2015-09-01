@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}Guess My Number{% endblock %}
+
+{% block content %}
+<div id="game-dirs">
+	<p>I'm thinking of a number between 1-10.</p>
+	<p>I'll give you 3 tries to guess it...</p>
+</div>
+
+<div id="hint">
+	<p id="hint1"> </p>
+	<p id="hint2"> </p>
+</div>
+
+
+<form>
+	<input id="num" type="text" />
+</form>
+<button>Guess</button>
+<a id="play-again">Play Again</a>
+{% endblock %}
