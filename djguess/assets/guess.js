@@ -6,8 +6,6 @@ var strikes = 0;
 $("button").click(function() {
 	// grab input value
 	var my_guess = $('input:text').val();
-	console.log(my_guess);
-	console.log(my_num);
 	// clear #hint1 & #hint2 fields
 	$("#hint1").text(" ");
 	$("#hint2").text(" ");
