@@ -20,9 +20,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/$', include(admin.site.urls)),
     url(r'^$', views.index),
-    url(r'^GuessMyNumber/', include('guess_my_number.urls', namespace='guessinggame')),
+    url(r'^GuessMyNumber/$', include('guess_my_number.urls', namespace='guessinggame')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
