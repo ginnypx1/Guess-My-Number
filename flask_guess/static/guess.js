@@ -2,14 +2,8 @@
 var my_num = Math.floor(Math.random() * 10) + 1;
 var strikes = 0;
 
-// GAME FUNCTION
-$("button").click(function() {
-	// grab input value
-	var my_guess = $('input:text').val();
-	// clear #hint1 & #hint2 fields
-	$("#hint1").text(" ");
-	$("#hint2").text(" ");
-	// play a turn	
+function playTurn(my_guess) {
+	// play a turn
 	if (my_num == my_guess) {
 		// display win state
 		$("#hint2").append("You Win! :)");
@@ -29,8 +23,20 @@ $("button").click(function() {
 			$("#hint2").append("Hint: Guess Lower");
 		} // end if/else (<>)
 	} // end if/elseif/else (win/lose/keepgoing)
+};
+
+// GAME LOOP
+$("#submit").click(function() {
+	// grab input value
+	var my_guess = $('input:text').val();
+	// clear #hint1 & #hint2 fields
+	$("#hint1").text(" ");
+	$("#hint2").text(" ");
+	//play a turn
+	playTurn(my_guess);
 }); // end click function
 
+// play again
 $("#play-again").click(function() {
 	location.reload(true);
 }); // end click function
