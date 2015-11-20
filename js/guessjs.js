@@ -6,10 +6,10 @@ function playTurn(my_guess) {
     // play a turn
     if (my_num == my_guess) {
         // display win state
-        $("#hint2").append("You Win! :)");
+        $("#hint2").append("You Win!").css("font-family", 'Pinyon Script').css("font-size", "4em");
     } else if (strikes == 2) {
         // display loss state
-        $("#hint1").append("You Lose! :(");
+        $("#hint1").append("You Lose!").css("font-family", 'Pinyon Script').css("font-size", "4em");;
         $("#hint2").append("My number was " + my_num + ".");    
     } else {
         // guess again, higher or lower

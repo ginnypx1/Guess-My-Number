@@ -21,13 +21,62 @@ ul li {
 }
 /*FONTS___________________*/
 body {
+    text-align: center;
     font-size: 1em;
 }
-
+body,
+.navbar-brand,
+.navbar-right {
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+label {
+    font-family: 'Pinyon Script', cursive;
+}
+label {
+    font-size: 2em;
+}
+h1 {
+    font-size: 7em;
+}
+#game-dirs p,
+.navbar-brand, 
+.navbar-right,
+#play-again {
+    font-size: 0.75em;
+}
+#hint {
+    font-size: 0.9em;
+}
 /*COLORS___________________*/
-
+a:link,
+a:visited,
+.replay a,
+footer {
+    color: #999999; /* grey */
+}
+a:hover,
+a:focus {
+    color: #333333; /* black */
+}
+button {
+    background: white;
+    border-radius: 30px;
+    border: 1px solid #999999;
+}
 /*SPACING___________________*/
-
+button {
+    padding: 0px 25px;
+}
+h1 {
+    padding: 25px 0px 0px 0px;
+}
+.replay {
+    padding: 25px 0px;
+}
+.main {
+    height: 750px;
+}
 /*ICONS___________________*/
 @font-face {
     font-family: 'icomoon';
