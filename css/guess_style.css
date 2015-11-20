@@ -30,6 +30,7 @@ body,
     font-family: 'Montserrat', sans-serif;
 }
 h1,
+h2,
 label {
     font-family: 'Pinyon Script', cursive;
 }
@@ -64,6 +65,10 @@ button {
     border-radius: 30px;
     border: 1px solid #999999;
 }
+.about-two strong,
+.contacts a {
+    color: #888888; /* grey */
+}
 /*SPACING___________________*/
 button {
     padding: 0px 25px;
@@ -76,6 +81,13 @@ h1 {
 }
 .main {
     height: 750px;
+}
+.about-two,
+.contact-two {
+    margin-top: 50px;
+    width: 45%;
+    height: 600px;
+    text-align: justify;
 }
 /*ICONS___________________*/
 @font-face {
