@@ -8,4 +8,4 @@ This Python game can be played in several versions:
   - djguess contains a Django version of Guess My Number for the web
   - flask_guess contains a Flask version of Guess My Number for the web
 
-Check out this project at: ginnypx1.gitbub.io/Guess-My-Number
+Check out this project at: ginnypx1.github.io/Guess-My-Number
