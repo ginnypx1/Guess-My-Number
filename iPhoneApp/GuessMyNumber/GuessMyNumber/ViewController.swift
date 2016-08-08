@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - game loop
     
     func playTurn(guess: Int) {
-        // dismiss keyboard
+        // dismiss the keyboard
         textField.resignFirstResponder()
         //if randomNumber == myGuess
         if randomNumber == myGuess {
@@ -96,6 +96,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         winLose.text = " "
     }
     
+    // MARK: - Dismiss the keyboard
+    
+    // when touched outside the keyboard
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
 }
