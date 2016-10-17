@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,10 @@
                         <viewControllerLayoutGuide type="bottom" id="eU2-os-Rfi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess My Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnP-Qn-qBb">
-                                <rect key="frame" x="24" y="20" width="552" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="dMc-cv-Kyf"/>
                                 </constraints>
@@ -28,7 +28,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of a number 1-10." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOE-j8-mDh">
-                                <rect key="frame" x="24" y="96" width="552" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="2LK-0W-Vhy"/>
                                     <constraint firstAttribute="height" constant="27" id="En2-um-5f7"/>
@@ -43,7 +42,6 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll give you 3 tries to guess it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-o9-FFs">
-                                <rect key="frame" x="24" y="131" width="552" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="VlK-6u-AIP"/>
                                 </constraints>
@@ -52,7 +50,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NYe-zP-mf2">
-                                <rect key="frame" x="24" y="285" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="TNF-2E-agF"/>
                                     <constraint firstAttribute="height" constant="30" id="lZB-GE-1kd"/>
@@ -66,15 +63,14 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40S-Ue-KIZ">
-                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9XN-Gl-kGv"/>
                                     <constraint firstAttribute="height" constant="30" id="vEP-TW-guf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
                                 <state key="normal" title="Play Again">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -86,13 +82,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-Mo-6nA">
-                                <rect key="frame" x="24" y="204" width="552" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="IfT-mt-l0K"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="ujE-4R-obq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -101,16 +96,14 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2k-CP-NCe">
-                                <rect key="frame" x="24" y="233" width="552" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="nW2-Ig-Mew"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-dH-ZIZ">
-                                <rect key="frame" x="24" y="387" width="552" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="7GR-2R-Ndi"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="166" id="PFC-fc-0iJ"/>
@@ -125,20 +118,19 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-EU-2Dx">
-                                <rect key="frame" x="264" y="323" width="72" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="65u-6q-WYH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="35"/>
                                 <state key="normal" title="Guess">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RPx-3v-I5j"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="nYI-EU-2Dx" secondAttribute="trailing" constant="105" id="0F1-eq-PqB"/>
                             <constraint firstItem="9hX-o9-FFs" firstAttribute="top" secondItem="pnP-Qn-qBb" secondAttribute="bottom" constant="34" id="0vz-FE-hKf"/>
@@ -154,7 +146,7 @@
                             <constraint firstItem="u2k-CP-NCe" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="8" id="DFL-wY-uCD"/>
                             <constraint firstItem="NYe-zP-mf2" firstAttribute="top" secondItem="u2k-CP-NCe" secondAttribute="bottom" constant="37" id="EOp-qX-b53"/>
                             <constraint firstItem="NYe-zP-mf2" firstAttribute="leading" secondItem="eSz-dH-ZIZ" secondAttribute="leading" id="Emm-Gb-lXK"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="top" secondItem="NYe-zP-mf2" secondAttribute="bottom" constant="8" id="Et6-iP-SKc"/>
+                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="top" secondItem="NYe-zP-mf2" secondAttribute="bottom" constant="-1" id="Et6-iP-SKc"/>
                             <constraint firstItem="nYI-EU-2Dx" firstAttribute="top" secondItem="NYe-zP-mf2" secondAttribute="bottom" constant="8" symbolic="YES" id="FeB-Nr-jsK"/>
                             <constraint firstItem="sbq-Mo-6nA" firstAttribute="leading" secondItem="u2k-CP-NCe" secondAttribute="leading" id="GSa-eu-M38"/>
                             <constraint firstItem="pnP-Qn-qBb" firstAttribute="top" secondItem="v1y-Jh-uGC" secondAttribute="bottom" id="Gu4-QG-rTX"/>
@@ -170,7 +162,6 @@
                             <constraint firstItem="NYe-zP-mf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q3r-IT-029"/>
                             <constraint firstAttribute="trailing" secondItem="40S-Ue-KIZ" secondAttribute="trailing" id="QHm-VK-r19"/>
                             <constraint firstItem="pnP-Qn-qBb" firstAttribute="trailing" secondItem="OOE-j8-mDh" secondAttribute="trailing" id="QjT-EN-PWk"/>
-                            <constraint firstItem="40S-Ue-KIZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qts-0O-M7c"/>
                             <constraint firstItem="9hX-o9-FFs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="RYH-3m-hMk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pnP-Qn-qBb" secondAttribute="trailing" constant="4" id="SJD-VV-zpi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sbq-Mo-6nA" secondAttribute="trailing" constant="4" id="UeB-Wi-Fb7"/>
@@ -246,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="386"/>
+            <point key="canvasLocation" x="436.875" y="385.56338028169017"/>
         </scene>
     </scenes>
 </document>

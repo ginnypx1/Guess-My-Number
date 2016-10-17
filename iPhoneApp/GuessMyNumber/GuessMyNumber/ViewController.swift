@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - game loop
     
-    func playTurn(guess: Int) {
+    func playTurn(_ guess: Int) {
         // dismiss the keyboard
         textField.resignFirstResponder()
         //if randomNumber == myGuess
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK - button press
 
     // PUSH THE GUESS BUTTON
-    @IBAction func guess(sender: AnyObject) {
+    @IBAction func guess(_ sender: AnyObject) {
         // grab the textField's input and set as myGuess
         if let guess = textField.text {
             if let intGuess = Int(guess) {
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     //PUSH THE PLAY AGAIN BUTTON
-    @IBAction func playAgain(sender: AnyObject) {
+    @IBAction func playAgain(_ sender: AnyObject) {
         // reset game variables
         randomNumber = Int(arc4random_uniform(11)) + 1
         strikes = 0
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Dismiss the keyboard
     
     // when touched outside the keyboard
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
