@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "340CC9BD1D53ADA1003FAF5E"
+               BlueprintIdentifier = "346A195E1E9947CF003F3683"
                BuildableName = "GuessMyNumber.app"
                BlueprintName = "GuessMyNumber"
                ReferencedContainer = "container:GuessMyNumber.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "340CC9BD1D53ADA1003FAF5E"
+            BlueprintIdentifier = "346A195E1E9947CF003F3683"
             BuildableName = "GuessMyNumber.app"
             BlueprintName = "GuessMyNumber"
             ReferencedContainer = "container:GuessMyNumber.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "340CC9BD1D53ADA1003FAF5E"
+            BlueprintIdentifier = "346A195E1E9947CF003F3683"
             BuildableName = "GuessMyNumber.app"
             BlueprintName = "GuessMyNumber"
             ReferencedContainer = "container:GuessMyNumber.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "340CC9BD1D53ADA1003FAF5E"
+            BlueprintIdentifier = "346A195E1E9947CF003F3683"
             BuildableName = "GuessMyNumber.app"
             BlueprintName = "GuessMyNumber"
             ReferencedContainer = "container:GuessMyNumber.xcodeproj">

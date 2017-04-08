@@ -2,98 +2,37 @@
 //  ViewController.swift
 //  GuessMyNumber
 //
-//  Created by Ginny Pennekamp on 8/4/16.
-//  Copyright © 2016 GhostBirdGames. All rights reserved.
+//  Created by Ginny Pennekamp on 4/8/17.
+//  Copyright © 2017 GhostBirdGames. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var StrikeCount: UILabel!
-    @IBOutlet weak var hint: UILabel!
     
+    // MARK: - Outlets
+
+    @IBOutlet weak var strikeCountLabel: UILabel!
+    @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var winLoseLabel: UILabel!
     
-    @IBOutlet weak var winLose: UILabel!
+    // MARK: - Game variables
     
-    // MARK: - game variables
-
-    var randomNumber: Int = Int(arc4random_uniform(11)) + 1
+    var randomNumber: Int = Int(arc4random_uniform(10)) + 1
+    
     var strikes: Int = 0
-    var myGuess: Int = 0
-    
-    // MARK: - auto Apple
+    var userGuess: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // conform to UITextFieldDelegate to toggle keyboard
-        self.textField.delegate = self;
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - game loop
-    
-    func playTurn(_ guess: Int) {
-        // dismiss the keyboard
-        textField.resignFirstResponder()
-        //if randomNumber == myGuess
-        if randomNumber == myGuess {
-           // display win in winLose field
-            winLose.text = "You win!"
-        //else if strikes == 2
-        } else if strikes == 2 {
-            // display lose in winLose field
-            winLose.text = "You lose!"
-        } else {
-            // if randomNumber > myGuess
-            if randomNumber > myGuess {
-                strikes += 1
-                StrikeCount.text = "Strikes: \(strikes)"
-                hint.text = "Hint: guess higher!"
-            } else {
-                strikes += 1
-                StrikeCount.text = "Strikes: \(strikes)"
-                hint.text = "Hint: guess lower!"
-            }
-        }
-    }
-    
-    //MARK - button press
-
-    // PUSH THE GUESS BUTTON
-    @IBAction func guess(_ sender: AnyObject) {
-        // grab the textField's input and set as myGuess
-        if let guess = textField.text {
-            if let intGuess = Int(guess) {
-                myGuess = intGuess
-            } else {
-                hint.text = "Please enter a number 1-10"
-            }
-        } else {
-            hint.text = "Please enter a number 1-10"
-        }
-        // clear StrikeCount and hint
-        StrikeCount.text = " "
-        hint.text = " "
-        // playTurn(myguess)
-        playTurn(myGuess)
-    }
-
-    //PUSH THE PLAY AGAIN BUTTON
-    @IBAction func playAgain(_ sender: AnyObject) {
-        // reset game variables
-        randomNumber = Int(arc4random_uniform(11)) + 1
-        strikes = 0
-        // clear all fields
-        textField.text = ""
-        StrikeCount.text = " "
-        hint.text = " "
-        winLose.text = " "
+        // textFieldDelegate
+        self.textField.delegate = self
+        
+        // clear label fields
+        strikeCountLabel.text = ""
+        hintLabel.text = ""
+        winLoseLabel.text = ""
     }
     
     // MARK: - Dismiss the keyboard
@@ -103,6 +42,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    // MARK: Play a turn
     
+    func playTurn(_ guess: Int) {
+        // dismiss the keyboard
+        textField.resignFirstResponder()
+        
+        //if randomNumber == userGuess
+        if randomNumber == userGuess {
+            // display win in winLose field
+            winLoseLabel.text = "You win!"
+            
+        //else if strikes == 2
+        } else if strikes == 2 {
+            // display lose in winLose field
+            strikeCountLabel.text = "My number was \(randomNumber)"
+            winLoseLabel.text = "You lose!"
+            
+        } else {
+            strikes += 1
+            strikeCountLabel.text = "Strikes: \(strikes)"
+            // if randomNumber > userGuess
+            if randomNumber > userGuess {
+                hintLabel.text = "Hint: guess higher!"
+            } else {
+                hintLabel.text = "Hint: guess lower!"
+            }
+        }
+    }
+    
+    // MARK: - Guess
+
+    @IBAction func guess(_ sender: Any) {
+        // grab the textField's input and set as myGuess
+        if let guess = textField.text {
+            if let intGuess = Int(guess) {
+                userGuess = intGuess
+            } else {
+                hintLabel.text = "Please enter a number 1-10"
+            }
+        } else {
+            hintLabel.text = "Please enter a number 1-10"
+        }
+        
+        // clear StrikeCount and hint
+        strikeCountLabel.text = ""
+        hintLabel.text = ""
+        textField.text = ""
+        textField.placeholder = "5"
+        
+        // playTurn(myguess)
+        playTurn(userGuess)
+    }
+    
+    // MARK: - Reset for new game
+
+    @IBAction func playAgain(_ sender: Any) {
+        
+        // reset game variables
+        randomNumber = Int(arc4random_uniform(10)) + 1
+        strikes = 0
+        
+        // clear all fields
+        textField.text = ""
+        strikeCountLabel.text = ""
+        hintLabel.text = ""
+        winLoseLabel.text = ""
+    }
 }
 

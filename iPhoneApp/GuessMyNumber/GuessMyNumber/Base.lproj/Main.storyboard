@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,232 +15,122 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessMyNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="v1y-Jh-uGC"/>
-                        <viewControllerLayoutGuide type="bottom" id="eU2-os-Rfi"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess My Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnP-Qn-qBb">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="dMc-cv-Kyf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of a number 1-10." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOE-j8-mDh">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="2LK-0W-Vhy"/>
-                                    <constraint firstAttribute="height" constant="27" id="En2-um-5f7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2LK-0W-Vhy"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll give you 3 tries to guess it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-o9-FFs">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="VlK-6u-AIP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NYe-zP-mf2">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="TNF-2E-agF"/>
-                                    <constraint firstAttribute="height" constant="30" id="lZB-GE-1kd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="TNF-2E-agF"/>
-                                    </mask>
-                                </variation>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40S-Ue-KIZ">
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9XN-Gl-kGv"/>
-                                    <constraint firstAttribute="height" constant="30" id="vEP-TW-guf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ai-mh-Mg8">
+                                <rect key="frame" x="0.0" y="383" width="736" height="31"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                 <state key="normal" title="Play Again">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9XN-Gl-kGv"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmh-Aw-Lw0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-Mo-6nA">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="IfT-mt-l0K"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="ujE-4R-obq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ujE-4R-obq"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2k-CP-NCe">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="nW2-Ig-Mew"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-dH-ZIZ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="7GR-2R-Ndi"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="166" id="PFC-fc-0iJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="PFC-fc-0iJ"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-EU-2Dx">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="65u-6q-WYH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="35"/>
-                                <state key="normal" title="Guess">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RPx-3v-I5j"/>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dkf-i4-VZJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess My Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-Gu-4au">
+                                <rect key="frame" x="0.0" y="20" width="736" height="62"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="48"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-zs-F9p">
+                                <rect key="frame" x="8" y="90" width="720" height="285"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-ff-Jab">
+                                        <rect key="frame" x="0.0" y="0.0" width="720" height="139"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of a number 1-10." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-PA-nOc">
+                                                <rect key="frame" x="0.0" y="0.0" width="720" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll give you 3 tries to guess it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBs-GT-Fl0">
+                                                <rect key="frame" x="0.0" y="19" width="720" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meV-BI-hY5">
+                                                <rect key="frame" x="0.0" y="38" width="720" height="39"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFr-FO-xdn">
+                                                <rect key="frame" x="0.0" y="77" width="720" height="62"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="45"/>
+                                                <state key="normal" title="Guess">
+                                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJd-f2-xAf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-MU-8wA">
+                                        <rect key="frame" x="0.0" y="147" width="720" height="138"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strikes: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G5-uo-w04">
+                                                <rect key="frame" x="0.0" y="0.0" width="720" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint: guess higher!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iG-kN-SBV">
+                                                <rect key="frame" x="0.0" y="20" width="720" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6m-v6-MIc">
+                                                <rect key="frame" x="0.0" y="41" width="720" height="97"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="78"/>
+                                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="nYI-EU-2Dx" secondAttribute="trailing" constant="105" id="0F1-eq-PqB"/>
-                            <constraint firstItem="9hX-o9-FFs" firstAttribute="top" secondItem="pnP-Qn-qBb" secondAttribute="bottom" constant="34" id="0vz-FE-hKf"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="105" id="1eY-vc-VaZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u2k-CP-NCe" secondAttribute="trailing" constant="4" id="33r-Mk-rzb"/>
-                            <constraint firstItem="9hX-o9-FFs" firstAttribute="trailing" secondItem="sbq-Mo-6nA" secondAttribute="trailing" id="3A5-ef-Gta"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="leading" secondItem="NYe-zP-mf2" secondAttribute="leading" id="4zO-8n-RlF"/>
-                            <constraint firstItem="9hX-o9-FFs" firstAttribute="top" secondItem="OOE-j8-mDh" secondAttribute="bottom" constant="8" id="7G7-DU-u9E"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9hX-o9-FFs" secondAttribute="trailing" constant="4" id="7zN-ex-Bt4"/>
-                            <constraint firstItem="OOE-j8-mDh" firstAttribute="top" secondItem="pnP-Qn-qBb" secondAttribute="bottom" constant="8" id="9GH-nF-2lW"/>
-                            <constraint firstItem="eSz-dH-ZIZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="ACb-Gy-u4T"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="72" id="Br7-w5-mAD"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="8" id="DFL-wY-uCD"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="top" secondItem="u2k-CP-NCe" secondAttribute="bottom" constant="37" id="EOp-qX-b53"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="leading" secondItem="eSz-dH-ZIZ" secondAttribute="leading" id="Emm-Gb-lXK"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="top" secondItem="NYe-zP-mf2" secondAttribute="bottom" constant="-1" id="Et6-iP-SKc"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="top" secondItem="NYe-zP-mf2" secondAttribute="bottom" constant="8" symbolic="YES" id="FeB-Nr-jsK"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="leading" secondItem="u2k-CP-NCe" secondAttribute="leading" id="GSa-eu-M38"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="top" secondItem="v1y-Jh-uGC" secondAttribute="bottom" id="Gu4-QG-rTX"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="top" secondItem="sbq-Mo-6nA" secondAttribute="bottom" constant="63" id="HZz-Y5-W6y"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="125" id="Jr8-3g-TIh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OOE-j8-mDh" secondAttribute="trailing" constant="4" id="Lmi-MD-KgU"/>
-                            <constraint firstItem="40S-Ue-KIZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Mbl-m8-DdI"/>
-                            <constraint firstItem="eSz-dH-ZIZ" firstAttribute="centerX" secondItem="40S-Ue-KIZ" secondAttribute="centerX" id="Mvg-cg-c7b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="40S-Ue-KIZ" secondAttribute="trailing" constant="-20" id="NHI-lc-Slo"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="top" secondItem="sbq-Mo-6nA" secondAttribute="bottom" constant="2" id="ODS-mj-45F"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="OhH-Xa-02u"/>
-                            <constraint firstItem="40S-Ue-KIZ" firstAttribute="bottom" secondItem="eU2-os-Rfi" secondAttribute="top" id="P7T-ed-psu"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q3r-IT-029"/>
-                            <constraint firstAttribute="trailing" secondItem="40S-Ue-KIZ" secondAttribute="trailing" id="QHm-VK-r19"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="trailing" secondItem="OOE-j8-mDh" secondAttribute="trailing" id="QjT-EN-PWk"/>
-                            <constraint firstItem="9hX-o9-FFs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="RYH-3m-hMk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pnP-Qn-qBb" secondAttribute="trailing" constant="4" id="SJD-VV-zpi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sbq-Mo-6nA" secondAttribute="trailing" constant="4" id="UeB-Wi-Fb7"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="VZk-k5-6EV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eSz-dH-ZIZ" secondAttribute="trailing" constant="4" id="VfP-2t-gKj"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="46" id="Xz5-8B-V79"/>
-                            <constraint firstItem="nYI-EU-2Dx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YpP-bF-dvJ"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="top" secondItem="v1y-Jh-uGC" secondAttribute="bottom" id="a7o-m9-sWB"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="alP-Uo-WcM"/>
-                            <constraint firstItem="OOE-j8-mDh" firstAttribute="leading" secondItem="9hX-o9-FFs" secondAttribute="leading" id="bZW-ih-a0d"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="top" secondItem="OOE-j8-mDh" secondAttribute="bottom" constant="72" id="cgp-J4-ceJ"/>
-                            <constraint firstItem="40S-Ue-KIZ" firstAttribute="top" secondItem="eSz-dH-ZIZ" secondAttribute="bottom" constant="8" id="dQR-iF-4EL"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="8" id="hVR-fD-WUA"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="top" secondItem="9hX-o9-FFs" secondAttribute="bottom" constant="46" id="inR-VR-oSk"/>
-                            <constraint firstItem="OOE-j8-mDh" firstAttribute="top" secondItem="pnP-Qn-qBb" secondAttribute="bottom" constant="8" symbolic="YES" id="jhi-th-lCx"/>
-                            <constraint firstItem="pnP-Qn-qBb" firstAttribute="leading" secondItem="OOE-j8-mDh" secondAttribute="leading" id="nbu-7c-8Hh"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nky-2L-ILJ"/>
-                            <constraint firstItem="eSz-dH-ZIZ" firstAttribute="top" secondItem="nYI-EU-2Dx" secondAttribute="bottom" constant="8" symbolic="YES" id="o0o-md-0mt"/>
-                            <constraint firstItem="9hX-o9-FFs" firstAttribute="leading" secondItem="sbq-Mo-6nA" secondAttribute="leading" id="oBL-XY-NQb"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="trailing" secondItem="eSz-dH-ZIZ" secondAttribute="trailing" id="ovF-fw-QAK"/>
-                            <constraint firstItem="OOE-j8-mDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="p12-nD-X8F"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="tAh-Vt-rvv"/>
-                            <constraint firstItem="eU2-os-Rfi" firstAttribute="top" secondItem="40S-Ue-KIZ" secondAttribute="bottom" id="tgz-9W-8ec"/>
-                            <constraint firstItem="NYe-zP-mf2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="uqA-ay-t0k"/>
-                            <constraint firstItem="sbq-Mo-6nA" firstAttribute="trailing" secondItem="u2k-CP-NCe" secondAttribute="trailing" id="v2B-Ps-FOJ"/>
-                            <constraint firstItem="OOE-j8-mDh" firstAttribute="trailing" secondItem="9hX-o9-FFs" secondAttribute="trailing" id="vsR-57-cpk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NYe-zP-mf2" secondAttribute="trailing" constant="4" id="zDk-50-XFr"/>
-                            <constraint firstItem="u2k-CP-NCe" firstAttribute="trailing" secondItem="NYe-zP-mf2" secondAttribute="trailing" id="zWS-M5-hia"/>
+                            <constraint firstAttribute="trailing" secondItem="5Ai-mh-Mg8" secondAttribute="trailing" id="2e4-bK-RcT"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AaT-Ih-KXW"/>
+                            <constraint firstItem="5Ai-mh-Mg8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.075" id="NPB-Bk-b8A"/>
+                            <constraint firstAttribute="trailing" secondItem="wtB-zs-F9p" secondAttribute="trailing" constant="8" id="OnI-XW-k80"/>
+                            <constraint firstItem="5Ai-mh-Mg8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SY1-Ow-vua"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Suj-a1-r6Z"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="dEo-cP-SQ4"/>
+                            <constraint firstAttribute="trailing" secondItem="Yck-Gu-4au" secondAttribute="trailing" id="hpD-RI-05h"/>
+                            <constraint firstItem="wtB-zs-F9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="qFB-Y2-5Eb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Ai-mh-Mg8" secondAttribute="bottom" id="s3x-S4-RVF"/>
+                            <constraint firstItem="5Ai-mh-Mg8" firstAttribute="top" secondItem="wtB-zs-F9p" secondAttribute="bottom" constant="8" id="uiP-v1-b2W"/>
+                            <constraint firstItem="wtB-zs-F9p" firstAttribute="top" secondItem="Yck-Gu-4au" secondAttribute="bottom" constant="8" id="v5u-QG-gaa"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Gu4-QG-rTX"/>
-                                <exclude reference="OhH-Xa-02u"/>
-                                <exclude reference="QjT-EN-PWk"/>
-                                <exclude reference="nbu-7c-8Hh"/>
-                                <exclude reference="bZW-ih-a0d"/>
-                                <exclude reference="jhi-th-lCx"/>
-                                <exclude reference="vsR-57-cpk"/>
-                                <exclude reference="0vz-FE-hKf"/>
-                                <exclude reference="3A5-ef-Gta"/>
-                                <exclude reference="oBL-XY-NQb"/>
-                                <exclude reference="GSa-eu-M38"/>
-                                <exclude reference="Xz5-8B-V79"/>
-                                <exclude reference="cgp-J4-ceJ"/>
-                                <exclude reference="v2B-Ps-FOJ"/>
-                                <exclude reference="4zO-8n-RlF"/>
-                                <exclude reference="Br7-w5-mAD"/>
-                                <exclude reference="DFL-wY-uCD"/>
-                                <exclude reference="hVR-fD-WUA"/>
-                                <exclude reference="zWS-M5-hia"/>
-                                <exclude reference="EOp-qX-b53"/>
-                                <exclude reference="Emm-Gb-lXK"/>
-                                <exclude reference="HZz-Y5-W6y"/>
-                                <exclude reference="Q3r-IT-029"/>
-                                <exclude reference="ovF-fw-QAK"/>
-                                <exclude reference="Mvg-cg-c7b"/>
-                                <exclude reference="o0o-md-0mt"/>
-                                <exclude reference="0F1-eq-PqB"/>
-                                <exclude reference="1eY-vc-VaZ"/>
-                                <exclude reference="FeB-Nr-jsK"/>
-                                <exclude reference="Jr8-3g-TIh"/>
-                                <exclude reference="P7T-ed-psu"/>
-                                <exclude reference="QHm-VK-r19"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="StrikeCount" destination="sbq-Mo-6nA" id="may-hG-MDp"/>
-                        <outlet property="hint" destination="u2k-CP-NCe" id="l40-ZT-w9i"/>
-                        <outlet property="textField" destination="NYe-zP-mf2" id="IFw-L3-dT1"/>
-                        <outlet property="winLose" destination="eSz-dH-ZIZ" id="cIX-NP-xq5"/>
+                        <outlet property="hintLabel" destination="8iG-kN-SBV" id="CN9-b1-AcY"/>
+                        <outlet property="strikeCountLabel" destination="8G5-uo-w04" id="CLM-cv-GPg"/>
+                        <outlet property="textField" destination="meV-BI-hY5" id="Zhm-GH-3eZ"/>
+                        <outlet property="winLoseLabel" destination="i6m-v6-MIc" id="nwi-Kx-1NO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436.875" y="385.56338028169017"/>
+            <point key="canvasLocation" x="135" y="138.75"/>
         </scene>
     </scenes>
 </document>
