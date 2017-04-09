@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var strikeCountLabel: UILabel!
     @IBOutlet weak var hintLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var winLoseLabel: UILabel!
     
     // MARK: - Game variables
@@ -26,8 +26,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // textFieldDelegate
-        self.textField.delegate = self
+        
+        // set text field delegate
+        guessTextField.delegate = self
         
         // clear label fields
         strikeCountLabel.text = ""
@@ -35,18 +36,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         winLoseLabel.text = ""
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // subscribe to keyboard notifications
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // unsubscribe to keyboard notifications
+        unsubscribeToKeyboardNotifications()
+    }
+    
     // MARK: - Dismiss the keyboard
     
-    // when touched outside the keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        guessTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     // MARK: Play a turn
     
     func playTurn(_ guess: Int) {
-        // dismiss the keyboard
-        textField.resignFirstResponder()
         
         //if randomNumber == userGuess
         if randomNumber == userGuess {
@@ -75,7 +90,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func guess(_ sender: Any) {
         // grab the textField's input and set as myGuess
-        if let guess = textField.text {
+        if let guess = guessTextField.text {
             if let intGuess = Int(guess) {
                 userGuess = intGuess
             } else {
@@ -88,8 +103,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // clear StrikeCount and hint
         strikeCountLabel.text = ""
         hintLabel.text = ""
-        textField.text = ""
-        textField.placeholder = "5"
+        guessTextField.text = ""
+        guessTextField.placeholder = "5"
         
         // playTurn(myguess)
         playTurn(userGuess)
@@ -104,7 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         strikes = 0
         
         // clear all fields
-        textField.text = ""
+        guessTextField.text = ""
         strikeCountLabel.text = ""
         hintLabel.text = ""
         winLoseLabel.text = ""

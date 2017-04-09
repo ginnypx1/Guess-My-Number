@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34161A6D1E9AFA27007964E7 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */; };
 		346A19631E9947CF003F3683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A19621E9947CF003F3683 /* AppDelegate.swift */; };
 		346A19651E9947CF003F3683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A19641E9947CF003F3683 /* ViewController.swift */; };
 		346A19681E9947CF003F3683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346A19661E9947CF003F3683 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		346A195F1E9947CF003F3683 /* GuessMyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessMyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		346A19621E9947CF003F3683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		346A19641E9947CF003F3683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				346A19621E9947CF003F3683 /* AppDelegate.swift */,
 				346A19641E9947CF003F3683 /* ViewController.swift */,
+				34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */,
 				346A19661E9947CF003F3683 /* Main.storyboard */,
 				346A19691E9947CF003F3683 /* Assets.xcassets */,
 				346A196B1E9947CF003F3683 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				346A19651E9947CF003F3683 /* ViewController.swift in Sources */,
 				346A19631E9947CF003F3683 /* AppDelegate.swift in Sources */,
+				34161A6D1E9AFA27007964E7 /* ExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				346A19731E9947CF003F3683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
