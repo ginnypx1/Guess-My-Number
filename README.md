@@ -2,12 +2,6 @@
 
 "Guess My Number" is a simple number guessing game (guess the numbers 1-10)initially developed in Python as a coding exercise to practice in several different formats:
 
-This Python game can be played in several different versions:
-  -  command line
-  -  plays Guess My Number in a Tkinter widget
-
-  - GuessMyNumber.xcodeproj is an iPhone app version of Guess My Number
-
 Check out this project at: 
 
 * iPhoneApp/GuessMyNumber/GuessMyNumber.xcodeproj runs an **iOS App** version of Guess My Number
@@ -39,3 +33,5 @@ To check out "Guess My Number" on the web: http://ginnypx1.github.io/PyDice
 ## Instructions
 
 Guess the number I'm thinking of in three tries or less. Enter your guess to get started...
+
+Check out this project at: http://ginnypx1.github.io/Guess-My-Number
