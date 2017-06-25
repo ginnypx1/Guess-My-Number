@@ -4,7 +4,7 @@
 
 Check out this project at: 
 
-* iPhoneApp/GuessMyNumber/GuessMyNumber.xcodeproj runs an **iOS App** version of Guess My Number
+* iPhoneApp/GuessMyNumber/GuessMyNumber.xcodeproj runs an **iPhone** version of Guess My Number
 * http://ginnypx1.github.io/Guess-My-Number shows off a **JavaScript/HTML** web version of GuessMyNumber
 * guess_my_number.py plays Guess My Number in the **command line**
 * tkguess.py plays Guess My Number in a **Tkinter widget**
@@ -35,3 +35,7 @@ To check out "Guess My Number" on the web: http://ginnypx1.github.io/PyDice
 Guess the number I'm thinking of in three tries or less. Enter your guess to get started...
 
 Check out this project at: http://ginnypx1.github.io/Guess-My-Number
+
+## iPhone App Info
+
+The "Guess My Number" iPhone app has been refactored in Swift 4.0 for iOS 11.

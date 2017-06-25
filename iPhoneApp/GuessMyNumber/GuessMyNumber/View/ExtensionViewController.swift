@@ -19,14 +19,14 @@ extension ViewController {
         return keyboardSize.cgRectValue.height
     }
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         // shifts the view up the height of the keyboard
         if guessTextField.isFirstResponder {
             view.frame.origin.y = getKeyboardHeight(notification) * (-1)
         }
     }
     
-    func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         // shifts the view down to the bottom when keyboard closes
         view.frame.origin.y = 0
     }
