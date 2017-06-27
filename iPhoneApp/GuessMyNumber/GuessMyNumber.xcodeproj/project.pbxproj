@@ -16,6 +16,8 @@
 		346E21BD1F006F9600F2EF28 /* StrikesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346E21BC1F006F9600F2EF28 /* StrikesView.xib */; };
 		346E21C01F0075A600F2EF28 /* small-crowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 346E21BE1F0075A600F2EF28 /* small-crowd.mp3 */; };
 		346E21C11F0075A600F2EF28 /* sad-trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 346E21BF1F0075A600F2EF28 /* sad-trombone.mp3 */; };
+		3481D0111F02CE3000DC71D1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481D00F1F02CE3000DC71D1 /* spark.png */; };
+		3481D0171F02CE9A00DC71D1 /* Rainstorm.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 3481D0161F02CE9A00DC71D1 /* Rainstorm.scnp */; };
 		34B80EF31F00546400834748 /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 34B80EF11F00546400834748 /* Confetti.scnp */; };
 		34B80EF41F00546400834748 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B80EF21F00546400834748 /* confetti.png */; };
 		34D9E0ED1F005C3600990598 /* WinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E0EC1F005C3600990598 /* WinView.xib */; };
@@ -39,6 +41,8 @@
 		346E21BC1F006F9600F2EF28 /* StrikesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrikesView.xib; sourceTree = "<group>"; };
 		346E21BE1F0075A600F2EF28 /* small-crowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "small-crowd.mp3"; sourceTree = "<group>"; };
 		346E21BF1F0075A600F2EF28 /* sad-trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sad-trombone.mp3"; sourceTree = "<group>"; };
+		3481D00F1F02CE3000DC71D1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		3481D0161F02CE9A00DC71D1 /* Rainstorm.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Rainstorm.scnp; sourceTree = "<group>"; };
 		34B80EF11F00546400834748 /* Confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Confetti.scnp; sourceTree = "<group>"; };
 		34B80EF21F00546400834748 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
 		34D9E0EC1F005C3600990598 /* WinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinView.xib; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				34B80EF11F00546400834748 /* Confetti.scnp */,
 				34B80EF21F00546400834748 /* confetti.png */,
 				346A196B1E9947CF003F3683 /* LaunchScreen.storyboard */,
+				3481D00F1F02CE3000DC71D1 /* spark.png */,
+				3481D0161F02CE9A00DC71D1 /* Rainstorm.scnp */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -204,11 +210,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3481D0111F02CE3000DC71D1 /* spark.png in Resources */,
 				346A196D1E9947CF003F3683 /* LaunchScreen.storyboard in Resources */,
 				346E21C11F0075A600F2EF28 /* sad-trombone.mp3 in Resources */,
 				34D9E0ED1F005C3600990598 /* WinView.xib in Resources */,
 				346E21C01F0075A600F2EF28 /* small-crowd.mp3 in Resources */,
 				346A196A1E9947CF003F3683 /* Assets.xcassets in Resources */,
+				3481D0171F02CE9A00DC71D1 /* Rainstorm.scnp in Resources */,
 				346A19681E9947CF003F3683 /* Main.storyboard in Resources */,
 				346E21BD1F006F9600F2EF28 /* StrikesView.xib in Resources */,
 				34B80EF41F00546400834748 /* confetti.png in Resources */,

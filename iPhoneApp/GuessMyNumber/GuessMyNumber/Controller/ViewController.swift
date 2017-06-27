@@ -181,14 +181,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // State win or lose
         winView.winLoseLabel.text = didWin ? "You Win!" : "You Lose!"
         
-        if didWin {
-            let myScene = SCNScene()
-            let particleNode = SCNNode()
-            let particleSystem = SCNParticleSystem(named: "Confetti", inDirectory: "")
-            particleNode.addParticleSystem(particleSystem!)
-            myScene.rootNode.addChildNode(particleNode)
-            winView.sceneKitView.scene = myScene
-        }
+        // play graphics
+        let myScene = SCNScene()
+        let particleNode = SCNNode()
+        let particleSystem = didWin ? SCNParticleSystem(named: "Confetti", inDirectory: "") : SCNParticleSystem(named: "Rainstorm", inDirectory: "")
+        particleNode.addParticleSystem(particleSystem!)
+        myScene.rootNode.addChildNode(particleNode)
+        winView.sceneKitView.scene = myScene
         
         // allow user to select play again
         winView.playAgainButton.addTarget(self, action: #selector(playAgainPressed(sender:)), for: UIControlEvents.touchUpInside)
