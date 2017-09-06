@@ -1,5 +1,5 @@
 //
-//  ExtensionViewController.swift
+//  KeyboardNotifications.swift
 //  GuessMyNumber
 //
 //  Created by Ginny Pennekamp on 4/9/17.
@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension ViewController {
+    
     // MARK: - Keyboard Notifications
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
@@ -41,5 +42,33 @@ extension ViewController {
         // unsubscribes to keyboard notifications
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    // MARK: - Dismiss the keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guessTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        guessTextField.endEditing(true)
+        return false
+    }
+    
+    // MARK: - Add Tap Gesture Recognizer to dismiss view and end editing
+    
+    func addTapGestureRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func didTapView(){
+        guessTextField.endEditing(true)
     }
 }

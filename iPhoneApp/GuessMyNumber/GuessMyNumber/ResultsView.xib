@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+        <array key="SnellRoundhand.ttc">
+            <string>SnellRoundhand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsView" customModule="GuessMyNumber" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="24"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="correctNumberLabel" destination="Hp5-eA-tz0" id="41t-Mp-hvv"/>
+                <outlet property="playAgainButton" destination="NA7-pX-j3F" id="yFf-nJ-h1a"/>
+                <outlet property="sceneKitView" destination="P7t-2c-0GK" id="Iun-8v-dnw"/>
+                <outlet property="winLoseLabel" destination="QpX-qv-SL5" id="9nx-0v-8B2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7t-2c-0GK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                </sceneKitView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kbr-jC-e1u">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-qv-SL5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="110"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <size key="shadowOffset" width="0.0" height="4"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Correct Number Was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-M4-f3S">
+                            <rect key="frame" x="0.0" y="401" width="375" height="30"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp5-eA-tz0">
+                            <rect key="frame" x="0.0" y="435" width="375" height="105"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
+                            <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-pX-j3F">
+                    <rect key="frame" x="0.0" y="540" width="375" height="60"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <state key="normal" title="Play Again">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kbr-jC-e1u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Fj-MH-C7Q"/>
+                <constraint firstItem="NA7-pX-j3F" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="8L9-DW-fix"/>
+                <constraint firstItem="NA7-pX-j3F" firstAttribute="top" secondItem="kbr-jC-e1u" secondAttribute="bottom" id="AMX-oS-8sK"/>
+                <constraint firstItem="NA7-pX-j3F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ibz-hQ-Qpt"/>
+                <constraint firstAttribute="bottom" secondItem="P7t-2c-0GK" secondAttribute="bottom" id="WAA-fi-RRZ"/>
+                <constraint firstAttribute="trailing" secondItem="kbr-jC-e1u" secondAttribute="trailing" id="YUV-Be-p3E"/>
+                <constraint firstAttribute="trailing" secondItem="P7t-2c-0GK" secondAttribute="trailing" id="aNB-1E-z04"/>
+                <constraint firstItem="kbr-jC-e1u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bA9-Je-3D9"/>
+                <constraint firstAttribute="trailing" secondItem="NA7-pX-j3F" secondAttribute="trailing" id="iZ9-Me-3Dg"/>
+                <constraint firstItem="P7t-2c-0GK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uPq-Q0-oBQ"/>
+                <constraint firstAttribute="bottom" secondItem="NA7-pX-j3F" secondAttribute="bottom" id="wq2-5N-qXN"/>
+                <constraint firstItem="P7t-2c-0GK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zZh-EX-2Rp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

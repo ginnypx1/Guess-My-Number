@@ -17,12 +17,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
     
-    var winView: WinView!
+    var resultsView: ResultsView!
     var strikesView: StrikesView!
     var blackoutView: UIView!
     
     var soundManager: SoundManager = SoundManager()
-    
     var game: Game!
     
     // MARK: - View
@@ -30,19 +29,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set text field delegate
         self.guessTextField.delegate = self
         
-        let tapRecognizer = UITapGestureRecognizer()
-        tapRecognizer.addTarget(self, action: #selector(didTapView))
-        self.view.addGestureRecognizer(tapRecognizer)
+        addTapGestureRecognizer()
         
-        // create a game
         game = Game()
         print("\(game.randomNumber) is the winner")
     }
-    
-    // MARK: - Keyboard Notifications
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -56,39 +49,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         unsubscribeToKeyboardNotifications()
     }
     
-    // MARK: - Dismiss the keyboard
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guessTextField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        guessTextField.endEditing(true)
-        return false
-    }
-    
-    @objc func didTapView(){
-        guessTextField.endEditing(true)
-    }
-    
     // MARK: Play a turn
     
     func playTurn() {
-        //if randomNumber == userGuess
         if game.randomNumber == game.userGuess {
-            // activate Win
-            activateWin(didWin: true)
-            
-        //else if strikes == 2
+            game.didWin = true
+            activateResults()
         } else if game.strikes == 2 {
-            // activate Loss
-            activateWin(didWin: false)
-            
+            activateResults()
         } else {
             game.strikes += 1
             showGameStatus()
@@ -98,10 +66,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Guess
 
     @IBAction func guess(_ sender: Any) {
-        // grab the textField's input and set as game.userGuess
         if let guess = guessTextField.text {
             if let intGuess = Int(guess) {
                 game.userGuess = intGuess
+                playTurn()
             } else {
                 Alerts.displayAlert(from: self)
             }
@@ -111,40 +79,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         guessTextField.text = ""
         guessTextField.placeholder = "5"
-        
-        // playTurn()
-        playTurn()
     }
     
     // MARK: - Show Game Status
     
     func showGameStatus() {
-        // create black background
-        createBlackBackground()
-        // popdown view slides in from top of screen
+        self.blackoutView = BlackoutView.create(in: self.view)
+        self.view.addSubview(blackoutView)
         addStatusView()
-        // drop down the popdownView
+
         let dropHeight = (self.view.frame.size.height * 0.15)
         AnimationManager.animateViewPopdown(popdownView: self.strikesView, dropHeight: dropHeight)
     }
     
     func addStatusView() {
-        // make sure there's not already a popdown view on screen
         if (strikesView != nil) {
-            strikesView.view.removeFromSuperview()
+            strikesView.removeFromSuperview()
         }
+        strikesView = StrikesView.create(in: self.view, with: self.game) as! StrikesView
         
-        let viewWidth = self.view.frame.size.width >= self.view.frame.height ? (self.view.frame.size.height * 0.9) : (self.view.frame.size.width * 0.8)
-        let viewHeight = self.view.frame.size.width >= self.view.frame.height ? (self.view.frame.size.height * 0.7) : (self.view.frame.size.height * 0.5)
-        
-        // create the status view
-        strikesView = StrikesView(frame: CGRect(x: (self.view.frame.size.width-viewWidth)/2 , y: -800, width: viewWidth, height: viewHeight))
-        
-        // Display game status
-        strikesView.strikeCountLabel.text = "Strikes: \(game.strikes)"
-        strikesView.hintLabel.text = (game.randomNumber < game.userGuess) ? "Guess lower!" : "Guess higher!"
-        
-        // allow user guess Again
         strikesView.guessAgainButton.addTarget(self, action: #selector(guessAgainPressed(sender:)), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(strikesView)
@@ -152,88 +105,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Activate Win or Lose
     
-    func activateWin(didWin: Bool) {
-        // create black background
-        createBlackBackground()
-        // popdown view slides in from top of screen
-        addWinView(didWin: didWin)
+    func activateResults() {
+        self.blackoutView = BlackoutView.create(in: self.view)
+        self.view.addSubview(blackoutView)
+        addResultsView()
         
-        // drop down the popdownView
         let dropHeight = (self.view.frame.size.height * 0.15)
-        AnimationManager.animateViewPopdown(popdownView: self.winView, dropHeight: dropHeight)
+        AnimationManager.animateViewPopdown(popdownView: self.resultsView, dropHeight: dropHeight)
         
-        // play sound
-        soundManager.playWinSoundEffect(didWin: didWin)
+        soundManager.playWinSoundEffect(didWin: game.didWin)
     }
     
-    func addWinView(didWin: Bool) {
-        // make sure there's not already a popdown view on screen
-        if (winView != nil) {
-            winView.view.removeFromSuperview()
+    func addResultsView() {
+        if (resultsView != nil) {
+            resultsView.removeFromSuperview()
         }
+        resultsView = ResultsView.create(in: self.view, with: self.game) as! ResultsView
         
-        let viewWidth = self.view.frame.size.width >= self.view.frame.height ? (self.view.frame.size.height * 0.8) : (self.view.frame.size.width * 0.8)
-        let viewHeight = self.view.frame.size.width >= self.view.frame.height ? (self.view.frame.size.height * 0.8) : (self.view.frame.size.height * 0.8)
+        resultsView.playAgainButton.addTarget(self, action: #selector(playAgainPressed(sender:)), for: UIControlEvents.touchUpInside)
         
-        // create the win view
-        winView = WinView(frame: CGRect(x: (self.view.frame.size.width-viewWidth)/2 , y: -800, width: viewWidth, height: viewHeight))
-        
-        // State win or lose
-        winView.winLoseLabel.text = didWin ? "You Win!" : "You Lose!"
-        
-        // play graphics
-        let myScene = SCNScene()
-        let particleNode = SCNNode()
-        let particleSystem = didWin ? SCNParticleSystem(named: "Confetti", inDirectory: "") : SCNParticleSystem(named: "Rainstorm", inDirectory: "")
-        particleNode.addParticleSystem(particleSystem!)
-        myScene.rootNode.addChildNode(particleNode)
-        winView.sceneKitView.scene = myScene
-        
-        // allow user to select play again
-        winView.playAgainButton.addTarget(self, action: #selector(playAgainPressed(sender:)), for: UIControlEvents.touchUpInside)
-        
-        self.view.addSubview(winView)
+        self.view.addSubview(resultsView)
     }
     
     // MARK: - Play Again
     
     @objc func playAgainPressed(sender: UIButton) {
-        // stop audio
         soundManager.stopSound()
+        AnimationManager.removePopdown(self.resultsView, blackoutView: self.blackoutView)
         
-        // slide popup view up off screen
-        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
-            self.winView.center.y -= 900
-        }, completion: { finished in
-            // remove the superviews and start a new game
-            self.winView.removeFromSuperview()
-            self.blackoutView.removeFromSuperview()
-        })
-        
-        // create a new game
         self.game = Game()
     }
     
     @objc func guessAgainPressed(sender: UIButton) {
-        // slide popup view up off screen
-        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
-            self.strikesView.center.y -= 900
-        }, completion: { finished in
-            // remove the superviews and start a new game
-            self.strikesView.removeFromSuperview()
-            self.blackoutView.removeFromSuperview()
-        })
+        AnimationManager.removePopdown(self.strikesView, blackoutView: self.blackoutView)
     }
-    
-    // MARK: - Blackout View
-    
-    func createBlackBackground() {
-        // grey out the game board when superview pops up
-        blackoutView = UIView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height))
-        blackoutView.backgroundColor = UIColor.gray
-        blackoutView.alpha = 0.5
-        self.view.addSubview(blackoutView)
-    }
-    
 }
-

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34161A6D1E9AFA27007964E7 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */; };
+		34161A6D1E9AFA27007964E7 /* KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34161A6C1E9AFA26007964E7 /* KeyboardNotifications.swift */; };
 		346A19631E9947CF003F3683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A19621E9947CF003F3683 /* AppDelegate.swift */; };
 		346A19651E9947CF003F3683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A19641E9947CF003F3683 /* ViewController.swift */; };
 		346A19681E9947CF003F3683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346A19661E9947CF003F3683 /* Main.storyboard */; };
@@ -20,7 +20,8 @@
 		3481D0171F02CE9A00DC71D1 /* Rainstorm.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 3481D0161F02CE9A00DC71D1 /* Rainstorm.scnp */; };
 		34B80EF31F00546400834748 /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 34B80EF11F00546400834748 /* Confetti.scnp */; };
 		34B80EF41F00546400834748 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B80EF21F00546400834748 /* confetti.png */; };
-		34D9E0ED1F005C3600990598 /* WinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9E0EC1F005C3600990598 /* WinView.xib */; };
+		34CB3B741F5F3237004149D5 /* ResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CB3B731F5F3237004149D5 /* ResultsView.xib */; };
+		34CB3B7E1F605B3D004149D5 /* BlackoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB3B7D1F605B3D004149D5 /* BlackoutView.swift */; };
 		34D9E0F11F005C5B00990598 /* WinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E0F01F005C5B00990598 /* WinView.swift */; };
 		34D9E0F31F005C6600990598 /* StrikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E0F21F005C6600990598 /* StrikesView.swift */; };
 		34D9E0F61F00649C00990598 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9E0F51F00649C00990598 /* SoundManager.swift */; };
@@ -30,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		34161A6C1E9AFA26007964E7 /* KeyboardNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotifications.swift; sourceTree = "<group>"; };
 		346A195F1E9947CF003F3683 /* GuessMyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessMyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		346A19621E9947CF003F3683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		346A19641E9947CF003F3683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,8 @@
 		3481D0161F02CE9A00DC71D1 /* Rainstorm.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Rainstorm.scnp; sourceTree = "<group>"; };
 		34B80EF11F00546400834748 /* Confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Confetti.scnp; sourceTree = "<group>"; };
 		34B80EF21F00546400834748 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
-		34D9E0EC1F005C3600990598 /* WinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinView.xib; sourceTree = "<group>"; };
+		34CB3B731F5F3237004149D5 /* ResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsView.xib; sourceTree = "<group>"; };
+		34CB3B7D1F605B3D004149D5 /* BlackoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutView.swift; sourceTree = "<group>"; };
 		34D9E0F01F005C5B00990598 /* WinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinView.swift; sourceTree = "<group>"; };
 		34D9E0F21F005C6600990598 /* StrikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikesView.swift; sourceTree = "<group>"; };
 		34D9E0F51F00649C00990598 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3402A8B01F58A0D000466612 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				346E21BF1F0075A600F2EF28 /* sad-trombone.mp3 */,
+				346E21BE1F0075A600F2EF28 /* small-crowd.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		346A19561E9947CF003F3683 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				346A19661E9947CF003F3683 /* Main.storyboard */,
-				34D9E0EC1F005C3600990598 /* WinView.xib */,
+				34CB3B731F5F3237004149D5 /* ResultsView.xib */,
 				346E21BC1F006F9600F2EF28 /* StrikesView.xib */,
 				346A19691E9947CF003F3683 /* Assets.xcassets */,
 				34B80EF11F00546400834748 /* Confetti.scnp */,
@@ -113,9 +124,8 @@
 		34D9E0F41F00648500990598 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3402A8B01F58A0D000466612 /* Sounds */,
 				346A196E1E9947CF003F3683 /* Info.plist */,
-				346E21BF1F0075A600F2EF28 /* sad-trombone.mp3 */,
-				346E21BE1F0075A600F2EF28 /* small-crowd.mp3 */,
 				34D9E0F51F00649C00990598 /* SoundManager.swift */,
 				34D9E0F71F00669500990598 /* AnimationManager.swift */,
 			);
@@ -133,8 +143,8 @@
 		34D9E0FC1F0068AB00990598 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				34161A6C1E9AFA26007964E7 /* ExtensionViewController.swift */,
 				34D9E0FE1F006CD300990598 /* Alerts.swift */,
+				34161A6C1E9AFA26007964E7 /* KeyboardNotifications.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +155,7 @@
 				346A19641E9947CF003F3683 /* ViewController.swift */,
 				34D9E0F01F005C5B00990598 /* WinView.swift */,
 				34D9E0F21F005C6600990598 /* StrikesView.swift */,
+				34CB3B7D1F605B3D004149D5 /* BlackoutView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,8 +223,8 @@
 			files = (
 				3481D0111F02CE3000DC71D1 /* spark.png in Resources */,
 				346A196D1E9947CF003F3683 /* LaunchScreen.storyboard in Resources */,
+				34CB3B741F5F3237004149D5 /* ResultsView.xib in Resources */,
 				346E21C11F0075A600F2EF28 /* sad-trombone.mp3 in Resources */,
-				34D9E0ED1F005C3600990598 /* WinView.xib in Resources */,
 				346E21C01F0075A600F2EF28 /* small-crowd.mp3 in Resources */,
 				346A196A1E9947CF003F3683 /* Assets.xcassets in Resources */,
 				3481D0171F02CE9A00DC71D1 /* Rainstorm.scnp in Resources */,
@@ -233,11 +244,12 @@
 			files = (
 				346A19651E9947CF003F3683 /* ViewController.swift in Sources */,
 				34D9E0F11F005C5B00990598 /* WinView.swift in Sources */,
+				34CB3B7E1F605B3D004149D5 /* BlackoutView.swift in Sources */,
 				34D9E0F31F005C6600990598 /* StrikesView.swift in Sources */,
 				346A19631E9947CF003F3683 /* AppDelegate.swift in Sources */,
 				34D9E0F81F00669500990598 /* AnimationManager.swift in Sources */,
 				34D9E0FA1F00689300990598 /* GameModel.swift in Sources */,
-				34161A6D1E9AFA27007964E7 /* ExtensionViewController.swift in Sources */,
+				34161A6D1E9AFA27007964E7 /* KeyboardNotifications.swift in Sources */,
 				34D9E0FF1F006CD300990598 /* Alerts.swift in Sources */,
 				34D9E0F61F00649C00990598 /* SoundManager.swift in Sources */,
 			);
@@ -382,7 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghostbirdgames.GuessMyNumber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -397,7 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghostbirdgames.GuessMyNumber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -8,11 +8,19 @@
 
 import Foundation
 
+// MARK: - Game Model
+
 class Game {
     
+    // MARK: - Properties
+    
     var randomNumber: Int = 0
-    var strikes: Int = 0
+    
     var userGuess: Int = 0
+    var strikes: Int = 0
+    var didWin: Bool = false
+    
+    // MARK: - Init
     
     init() {
         self.randomNumber = Int(arc4random_uniform(10)) + 1
