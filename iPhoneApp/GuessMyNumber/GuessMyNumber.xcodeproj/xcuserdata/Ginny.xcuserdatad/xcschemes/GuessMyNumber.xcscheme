@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "34F1D1991F61CCE500998C06"
+               BuildableName = "GuessMyNumberTests.xctest"
+               BlueprintName = "GuessMyNumberTests"
+               ReferencedContainer = "container:GuessMyNumber.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

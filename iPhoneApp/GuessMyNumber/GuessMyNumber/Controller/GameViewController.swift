@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  GuessMyNumber
 //
 //  Created by Ginny Pennekamp on 4/8/17.
@@ -9,9 +9,11 @@
 import UIKit
 import SceneKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class GameViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Outlets
+    
+    @IBOutlet var directionLabels: [UILabel]!
     
     @IBOutlet weak var guessTextField: UITextField!
     
@@ -33,6 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         addTapGestureRecognizer()
         
+        AnimationManager.fadeInDirections(for: directionLabels)
         game = Game()
         print("\(game.randomNumber) is the winner")
     }
@@ -132,11 +135,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc func playAgainPressed(sender: UIButton) {
         soundManager.stopSound()
         AnimationManager.removePopdown(self.resultsView, blackoutView: self.blackoutView)
-        
+        self.blackoutView = nil
+        self.resultsView = nil
         self.game = Game()
     }
     
     @objc func guessAgainPressed(sender: UIButton) {
         AnimationManager.removePopdown(self.strikesView, blackoutView: self.blackoutView)
+        self.blackoutView = nil
+        self.strikesView = nil
     }
 }

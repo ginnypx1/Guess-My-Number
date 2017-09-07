@@ -10,6 +10,19 @@ import UIKit
 
 class AnimationManager {
     
+    // MARK: - Fade in directions
+    
+    static func fadeInDirections(for labels: [UILabel]) {
+        let duration: TimeInterval = 2.5
+        var delay: TimeInterval = 0
+        for label in labels {
+            UIView.animate(withDuration: duration, delay: delay, animations: {
+                label.alpha = 1
+            })
+            delay += 0.5
+        }
+    }
+    
     // MARK: - Drop down view
     
     static func animateViewPopdown(popdownView: UIView, dropHeight: CGFloat) {
