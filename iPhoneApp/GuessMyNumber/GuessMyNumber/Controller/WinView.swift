@@ -89,6 +89,7 @@ import SceneKit
         // State win or lose
         resultsView.winLoseLabel.text = game.didWin ? "You Win!" : "You Lose!"
         resultsView.correctNumberLabel.text = "\(game.randomNumber)"
+        AnimationManager.spinAnswer(in: resultsView.correctNumberLabel)
         
         // play graphics
         let myScene = SCNScene()

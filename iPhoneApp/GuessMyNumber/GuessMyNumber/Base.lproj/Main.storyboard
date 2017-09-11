@@ -34,28 +34,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess My Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-Gu-4au">
-                                <rect key="frame" x="0.0" y="20" width="320" height="142"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="187.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="95"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="80"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.96862745100000003" green="0.83137254900000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-zs-F9p">
-                                <rect key="frame" x="8" y="170" width="304" height="390"/>
+                                <rect key="frame" x="8" y="215.5" width="304" height="344.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-ff-Jab">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of a number 1-10." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-PA-nOc">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll give you 3 tries to guess it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBs-GT-Fl0">
-                                                <rect key="frame" x="0.0" y="31.5" width="304" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="304" height="25"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -63,17 +63,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sPX-cG-iig">
-                                        <rect key="frame" x="0.0" y="68" width="304" height="322"/>
+                                        <rect key="frame" x="0.0" y="61" width="304" height="283.5"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meV-BI-hY5">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="213"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="174.5"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFr-FO-xdn">
-                                                <rect key="frame" x="0.0" y="221" width="304" height="101"/>
+                                                <rect key="frame" x="0.0" y="182.5" width="304" height="101"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="70"/>
                                                 <state key="normal" title="Guess">
                                                     <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="Yck-Gu-4au" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AaT-Ih-KXW"/>
                             <constraint firstAttribute="trailing" secondItem="wtB-zs-F9p" secondAttribute="trailing" constant="8" id="OnI-XW-k80"/>
                             <constraint firstItem="Yck-Gu-4au" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Suj-a1-r6Z"/>
-                            <constraint firstItem="Yck-Gu-4au" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="dEo-cP-SQ4"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="dEo-cP-SQ4"/>
                             <constraint firstAttribute="trailing" secondItem="Yck-Gu-4au" secondAttribute="trailing" id="hpD-RI-05h"/>
                             <constraint firstItem="wtB-zs-F9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="qFB-Y2-5Eb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wtB-zs-F9p" secondAttribute="bottom" constant="8" id="t8w-pA-ET2"/>

@@ -42,4 +42,21 @@ class AnimationManager {
             blackoutView.removeFromSuperview()
         })
     }
+    
+    // MARK: - Spin correct answer
+    static func spinAnswer(in label: UILabel) {
+        let anim = UIViewPropertyAnimator(duration: 1, curve: .linear) {
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
+        }
+        anim.addAnimations {
+            let scale = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            label.transform = scale
+        }
+        anim.startAnimation()
+    }
 }

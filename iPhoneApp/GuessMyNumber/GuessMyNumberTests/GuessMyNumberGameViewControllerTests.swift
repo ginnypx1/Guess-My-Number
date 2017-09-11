@@ -62,7 +62,13 @@ class GuessMyNumberGameViewControllerTests: XCTestCase {
         XCTAssertEqual(alpha1, 1.0)
     }
     
-    // test guess entering text in text field sets user guess
+    func test_enteringText_InGuessTextField_SetsUserGuess() {
+        sut.guessTextField.text = "1"
+        let enteredGuess = Int(sut.guessTextField.text!)
+        sut.guess((Any).self)
+        let userGuess = sut.game.userGuess
+        XCTAssertEqual(userGuess, enteredGuess)
+    }
     // test guess entering wrong info sets off alert
     // test guess resets text field text to ""
     // test guess resets placeholder text to 5
