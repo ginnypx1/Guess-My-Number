@@ -40,6 +40,16 @@
                ReferencedContainer = "container:GuessMyNumber.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3422E9671F6845FB00520A5B"
+               BuildableName = "GuessMyNumberUITests.xctest"
+               BlueprintName = "GuessMyNumberUITests"
+               ReferencedContainer = "container:GuessMyNumber.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "I am thinking of a number 1-10."; ObjectID = "RLb-PA-nOc"; */
+"RLb-PA-nOc.text" = "I am thinking of a number 1-10.";
+
+/* Class = "UILabel"; text = "I'll give you 3 tries to guess it."; ObjectID = "UBs-GT-Fl0"; */
+"UBs-GT-Fl0.text" = "I'll give you 3 tries to guess it.";
+
+/* Class = "UILabel"; text = "Guess My Number"; ObjectID = "Yck-Gu-4au"; */
+"Yck-Gu-4au.text" = "Guess My Number";
+
+/* Class = "UIButton"; normalTitle = "Guess"; ObjectID = "fFr-FO-xdn"; */
+"fFr-FO-xdn.normalTitle" = "Guess";
+
+/* Class = "UITextField"; placeholder = "5"; ObjectID = "meV-BI-hY5"; */
+"meV-BI-hY5.placeholder" = "5";

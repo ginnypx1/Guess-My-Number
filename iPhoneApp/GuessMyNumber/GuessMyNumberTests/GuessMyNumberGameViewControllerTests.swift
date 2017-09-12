@@ -69,13 +69,45 @@ class GuessMyNumberGameViewControllerTests: XCTestCase {
         let userGuess = sut.game.userGuess
         XCTAssertEqual(userGuess, enteredGuess)
     }
-    // test guess entering wrong info sets off alert
-    // test guess resets text field text to ""
-    // test guess resets placeholder text to 5
     
-    // test play turn recognizes win
-    // test play turn recognizes loss
-    // test play turn recognizes play on
+    func test_guessTextField_resetsText() {
+        sut.guessTextField.text = "1"
+        sut.guess((Any).self)
+        let resetText = sut.guessTextField.text
+        XCTAssertEqual(resetText, "")
+    }
+    
+    func test_guessTextField_resetsPlaceholderText() {
+        sut.guessTextField.text = "1"
+        sut.guess((Any).self)
+        let placeholderText = sut.guessTextField.placeholder
+        XCTAssertEqual(placeholderText, "5")
+    }
+    
+    func test_playTurn_RecognizesWin() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 1
+        sut.playTurn()
+        XCTAssertEqual(sut.game.didWin, true)
+        XCTAssertNotNil(sut.resultsView)
+    }
+    
+    func test_playTurn_RecognizesLoss() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 8
+        sut.game.strikes = 2
+        sut.playTurn()
+        XCTAssertEqual(sut.game.didWin, false)
+        XCTAssertNotNil(sut.resultsView)
+    }
+    
+    func test_playTurn_RecognizesPlayOn() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 8
+        sut.playTurn()
+        XCTAssertEqual(sut.game.strikes, 1)
+        XCTAssertNotNil(sut.strikesView)
+    }
     
     func test_ShowGameStatus_CreatesBlackoutView() {
         sut.showGameStatus()
@@ -92,8 +124,21 @@ class GuessMyNumberGameViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.strikesView)
     }
     
-    // test strikesView shows proper strikes
-    // test strikesView shows higher or lower
+    func test_strikesView_ShowsCorrectStrikeCount() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 8
+        sut.playTurn()
+        let strikesLabelText = sut.strikesView.strikeCountLabel.text
+        XCTAssertEqual(strikesLabelText, "Strikes: 1")
+    }
+    
+    func test_strikesView_ShowsCorrectHint() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 8
+        sut.playTurn()
+        let hintLabelText = sut.strikesView.hintLabel.text
+        XCTAssertEqual(hintLabelText, "Guess lower!")
+    }
     
     func test_activateResults_CreatesBlackoutView() {
         sut.activateResults()
@@ -110,8 +155,22 @@ class GuessMyNumberGameViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.resultsView)
     }
     
-    // test resultsView shows proper result
-    // test resultsView shows proper number
+    func test_resultsView_ShowCorrectResult() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 1
+        sut.playTurn()
+        let resultsText = sut.resultsView.winLoseLabel.text
+        XCTAssertEqual(resultsText, "You Win!")
+    }
+    
+    func test_resultsView_ShowCorrectWinningNumber() {
+        sut.game.randomNumber = 1
+        sut.game.userGuess = 1
+        sut.playTurn()
+        let correctNumber = sut.resultsView.correctNumberLabel.text
+        XCTAssertEqual(correctNumber, "1")
+    }
+    
     // test resultsView shows proper animation
     
     func test_playAgainPressed_RemovesBlackoutView() {

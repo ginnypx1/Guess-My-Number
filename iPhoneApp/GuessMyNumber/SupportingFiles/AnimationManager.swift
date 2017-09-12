@@ -50,8 +50,6 @@ class AnimationManager {
             label.transform = label.transform.rotated(by: CGFloat(Double.pi))
             label.transform = label.transform.rotated(by: CGFloat(Double.pi))
             label.transform = label.transform.rotated(by: CGFloat(Double.pi))
-            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
-            label.transform = label.transform.rotated(by: CGFloat(Double.pi))
         }
         anim.addAnimations {
             let scale = CGAffineTransform(scaleX: 1.5, y: 1.5)

@@ -53,6 +53,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-qv-SL5">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="342.5"/>
+                            <accessibility key="accessibilityConfiguration" hint="You Won or Lost" identifier="WinLossLabel" label="Win or Loss Label"/>
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="110"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -61,12 +62,14 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Number Was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-M4-f3S">
                             <rect key="frame" x="0.0" y="346.5" width="375" height="26.5"/>
+                            <accessibility key="accessibilityConfiguration" hint="My Number Was" identifier="MyNumberWasLabel" label="My Number Was Label"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp5-eA-tz0">
                             <rect key="frame" x="0.0" y="377" width="375" height="163"/>
+                            <accessibility key="accessibilityConfiguration" hint="Correct Guess" identifier="CorrectNumberLabel" label="Correct Number Label"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="110"/>
                             <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -76,6 +79,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-pX-j3F">
                     <rect key="frame" x="0.0" y="540" width="375" height="60"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" hint="Play Again" identifier="Play Again Button" label="Play Again Button"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                     <state key="normal" title="Play Again">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
