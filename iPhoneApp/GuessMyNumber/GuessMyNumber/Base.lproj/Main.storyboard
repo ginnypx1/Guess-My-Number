@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,10 +26,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="GuessMyNumber" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,15 +95,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yck-Gu-4au" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AaT-Ih-KXW"/>
-                            <constraint firstAttribute="trailing" secondItem="wtB-zs-F9p" secondAttribute="trailing" constant="8" id="OnI-XW-k80"/>
-                            <constraint firstItem="Yck-Gu-4au" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Suj-a1-r6Z"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="top" secondItem="rth-Z0-0Jk" secondAttribute="top" id="AaT-Ih-KXW"/>
+                            <constraint firstItem="rth-Z0-0Jk" firstAttribute="trailing" secondItem="wtB-zs-F9p" secondAttribute="trailing" constant="8" id="OnI-XW-k80"/>
+                            <constraint firstItem="Yck-Gu-4au" firstAttribute="leading" secondItem="rth-Z0-0Jk" secondAttribute="leading" id="Suj-a1-r6Z"/>
                             <constraint firstItem="Yck-Gu-4au" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="dEo-cP-SQ4"/>
-                            <constraint firstAttribute="trailing" secondItem="Yck-Gu-4au" secondAttribute="trailing" id="hpD-RI-05h"/>
-                            <constraint firstItem="wtB-zs-F9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="qFB-Y2-5Eb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wtB-zs-F9p" secondAttribute="bottom" constant="8" id="t8w-pA-ET2"/>
+                            <constraint firstItem="rth-Z0-0Jk" firstAttribute="trailing" secondItem="Yck-Gu-4au" secondAttribute="trailing" id="hpD-RI-05h"/>
+                            <constraint firstItem="wtB-zs-F9p" firstAttribute="leading" secondItem="rth-Z0-0Jk" secondAttribute="leading" constant="8" id="qFB-Y2-5Eb"/>
+                            <constraint firstItem="rth-Z0-0Jk" firstAttribute="bottom" secondItem="wtB-zs-F9p" secondAttribute="bottom" constant="8" id="t8w-pA-ET2"/>
                             <constraint firstItem="wtB-zs-F9p" firstAttribute="top" secondItem="Yck-Gu-4au" secondAttribute="bottom" constant="8" id="v5u-QG-gaa"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="rth-Z0-0Jk"/>
                     </view>
                     <connections>
                         <outlet property="guessTextField" destination="meV-BI-hY5" id="yEL-N5-PBt"/>
