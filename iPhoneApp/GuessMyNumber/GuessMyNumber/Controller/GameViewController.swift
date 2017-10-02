@@ -37,6 +37,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         AnimationManager.fadeInDirections(for: directionLabels)
         game = Game()
+        
+        // allows developer to cheat
         print("\(game.randomNumber) is the winner")
     }
     

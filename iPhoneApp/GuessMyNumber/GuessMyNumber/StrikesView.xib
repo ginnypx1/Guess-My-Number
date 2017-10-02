@@ -11,9 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-        </array>
         <array key="SnellRoundhand.ttc">
             <string>SnellRoundhand</string>
             <string>SnellRoundhand-Bold</string>
@@ -44,21 +41,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nfW-cL-WrO">
-                    <rect key="frame" x="0.0" y="16" width="375" height="287"/>
+                    <rect key="frame" x="0.0" y="16" width="375" height="249.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strikes: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7R-TA-jlz">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
-                            <accessibility key="accessibilityConfiguration" hint="Number of Strikes" identifier="StrikesLabel" label="Strikes Label"/>
-                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="65"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                            <accessibility key="accessibilityConfiguration" hint="Number of Strikes" identifier="StrikesLabel" label="Strikes Label">
+                                <accessibilityTraits key="traits" staticText="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="75"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <color key="shadowColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <size key="shadowOffset" width="0.0" height="2"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess higher!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-gS-JOa">
-                            <rect key="frame" x="0.0" y="143.5" width="375" height="143.5"/>
+                            <rect key="frame" x="0.0" y="125" width="375" height="124.5"/>
                             <accessibility key="accessibilityConfiguration" hint="Guess Higher or Lower" identifier="HintLabel" label="Hint Label"/>
-                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="60"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <color key="shadowColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,10 +66,10 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqs-W2-avf">
-                    <rect key="frame" x="0.0" y="319" width="375" height="56"/>
+                    <rect key="frame" x="0.0" y="281.5" width="375" height="93.5"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration" hint="Guess Again" identifier="GuessAgainButton" label="Guess Again Button"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <state key="normal" title="Guess Again">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -82,7 +81,7 @@
                 <constraint firstAttribute="trailing" secondItem="nfW-cL-WrO" secondAttribute="trailing" id="EzO-hs-3uT"/>
                 <constraint firstItem="nfW-cL-WrO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QoJ-j0-Dev"/>
                 <constraint firstItem="Nqs-W2-avf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xno-7S-Xek"/>
-                <constraint firstItem="Nqs-W2-avf" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="d3G-0j-o6z"/>
+                <constraint firstItem="Nqs-W2-avf" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="d3G-0j-o6z"/>
                 <constraint firstAttribute="trailing" secondItem="Nqs-W2-avf" secondAttribute="trailing" id="efx-bS-wxD"/>
                 <constraint firstAttribute="bottom" secondItem="Nqs-W2-avf" secondAttribute="bottom" id="hcU-MV-6Cn"/>
                 <constraint firstItem="Nqs-W2-avf" firstAttribute="top" secondItem="nfW-cL-WrO" secondAttribute="bottom" constant="16" id="y4w-JE-BPD"/>

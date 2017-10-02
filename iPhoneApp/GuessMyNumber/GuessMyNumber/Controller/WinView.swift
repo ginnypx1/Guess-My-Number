@@ -91,6 +91,11 @@ import SceneKit
         resultsView.correctNumberLabel.text = "\(game.randomNumber)"
         AnimationManager.spinAnswer(in: resultsView.correctNumberLabel)
         
+        // Add accessibility to view
+        AccessibilityManager.applyDynamicText(to: resultsView.playAgainButton)
+        AccessibilityManager.applyResultsAccessibilityText(to: resultsView.winLoseLabel, for: game)
+        AccessibilityManager.applyAnswerAccessibilityText(to: resultsView.correctNumberLabel, for: game)
+        
         // play graphics
         let myScene = SCNScene()
         let particleNode = SCNNode()

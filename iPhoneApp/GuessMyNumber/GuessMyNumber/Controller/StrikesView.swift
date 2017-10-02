@@ -84,6 +84,11 @@ import UIKit
         strikesView.strikeCountLabel.text = "Strikes: \(game.strikes)"
         strikesView.hintLabel.text = (game.randomNumber < game.userGuess) ? "Guess lower!" : "Guess higher!"
         
+        // Add accessibility to view
+        AccessibilityManager.applyDynamicText(to: strikesView.guessAgainButton)
+        AccessibilityManager.applyStrikeAccessibilityText(to: strikesView.strikeCountLabel, with: game.strikes)
+        AccessibilityManager.applyHintAccessibilityText(to: strikesView.hintLabel, for: game)
+        
         return strikesView
     }
     

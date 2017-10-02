@@ -14,9 +14,6 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
         </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-        </array>
         <array key="SnellRoundhand.ttc">
             <string>SnellRoundhand-Bold</string>
         </array>
@@ -50,26 +47,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                 </sceneKitView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kbr-jC-e1u">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-qv-SL5">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="342.5"/>
-                            <accessibility key="accessibilityConfiguration" hint="You Won or Lost" identifier="WinLossLabel" label="Win or Loss Label"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="324.5"/>
+                            <accessibility key="accessibilityConfiguration" hint="You Won or You Lost" identifier="WinLossLabel" label="Win or Loss Label"/>
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="110"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <color key="shadowColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <size key="shadowOffset" width="0.0" height="2"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Number Was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-M4-f3S">
-                            <rect key="frame" x="0.0" y="346.5" width="375" height="26.5"/>
-                            <accessibility key="accessibilityConfiguration" hint="My Number Was" identifier="MyNumberWasLabel" label="My Number Was Label"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Number Was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-M4-f3S">
+                            <rect key="frame" x="0.0" y="328.5" width="375" height="23.5"/>
+                            <accessibility key="accessibilityConfiguration" hint="My Number Was..." identifier="MyNumberWasLabel" label="The Number Was Label"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp5-eA-tz0">
-                            <rect key="frame" x="0.0" y="377" width="375" height="163"/>
+                            <rect key="frame" x="0.0" y="356" width="375" height="154"/>
                             <accessibility key="accessibilityConfiguration" hint="Correct Guess" identifier="CorrectNumberLabel" label="Correct Number Label"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="110"/>
                             <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,10 +75,10 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-pX-j3F">
-                    <rect key="frame" x="0.0" y="540" width="375" height="60"/>
+                    <rect key="frame" x="0.0" y="510" width="375" height="90"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration" hint="Play Again" identifier="Play Again Button" label="Play Again Button"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <state key="normal" title="Play Again">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -90,7 +87,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kbr-jC-e1u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Fj-MH-C7Q"/>
-                <constraint firstItem="NA7-pX-j3F" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="8L9-DW-fix"/>
+                <constraint firstItem="NA7-pX-j3F" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="8L9-DW-fix"/>
                 <constraint firstItem="NA7-pX-j3F" firstAttribute="top" secondItem="kbr-jC-e1u" secondAttribute="bottom" id="AMX-oS-8sK"/>
                 <constraint firstItem="NA7-pX-j3F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ibz-hQ-Qpt"/>
                 <constraint firstAttribute="bottom" secondItem="P7t-2c-0GK" secondAttribute="bottom" id="WAA-fi-RRZ"/>
