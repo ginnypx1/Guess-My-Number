@@ -36,6 +36,6 @@ Guess the number I'm thinking of in three tries or less. Enter your guess to get
 
 Check out this project at: http://ginnypx1.github.io/Guess-My-Number
 
-## iPhone App Info
+## iPhone App Technical Information
 
-The "Guess My Number" iPhone app has been refactored in Swift 4.0 for iOS 11.
+The "Guess My Number" iPhone app has been refactored in Swift 4.0 for iOS 11. It has both unit and UI tests and is enabled for accessibility features.
